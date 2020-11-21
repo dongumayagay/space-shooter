@@ -1,6 +1,6 @@
 # space_shooter_console
 
-https://repl.it/@tontingkaloy/spaceshooterconsole-1#README.md
+https://repl.it/@tontingkaloy/spaceshooterconsole#README.md
 
 simple space shooter on console
 
