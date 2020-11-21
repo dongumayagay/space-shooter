@@ -1,4 +1,5 @@
 import curses.ascii, random, time, os
+
 if os.name == 'nt':
     import winsound
 
@@ -17,6 +18,7 @@ enemies = []
 start_time = time.time()
 move_time = time.time()
 inWindows = True if os.name == 'nt' else False
+score = 0
 
 while True:
 
@@ -36,7 +38,8 @@ while True:
         
     # drawing and logic
     screen.clear()
-
+    screen.addstr(0,0,'Score:')
+    screen.addstr(0,6,str(score))
     # ship drawing
     screen.addch(ship_y - 1, ship_x, '#')
     screen.addstr(ship_y, ship_x - 2, '#####')
@@ -75,5 +78,6 @@ while True:
                 
                 enemies.remove(enemy)
                 lasers.remove(laser)
+                score += 1
 
     screen.refresh()
